@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/golden</item>
+        <item name="colorPrimaryDark">@color/darkGolden</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/darkRed</item>
+        <item name="android:textColorPrimary">@color/darkRed</item>
+    </style>
+
+    <!-- Prayer Buttons  -->
+    <style name="PrayerButtons">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:backgroundTint">@color/lightGray</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Prayer Checkboxes -->
+    <style name="PrayersCheckboxes">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/darkRed</item>
+        <item name="android:buttonTint">@color/darkRed</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- Prayer Dialog Dividers -->
+    <style name="PrayerDividers">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/darkRed</item>
+    </style>
+
+</resources>

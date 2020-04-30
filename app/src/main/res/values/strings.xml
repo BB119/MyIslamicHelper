@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Islamic Helper</string>
+    <string name="title_home">Prayers</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="action_clear_all">Clear All</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#D81B60</color>
+    <color name="golden">#cd983f</color>
+    <color name="lightGolden">#dab471</color>
+    <color name="darkGolden">#b6852f</color>
+    <color name="darkRed">#600016</color>
+    <color name="darkGray">#515151</color>
+    <color name="lightGray">#a1a1a1</color>
+    <color name="darkerBlue">#00b1cc</color>
+    <color name="brightGreen">#4AF715</color>
+</resources>
