@@ -19,6 +19,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -73,8 +74,8 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        homeViewModel =  new ViewModelProvider(this).get(HomeViewModel.class);
+                //ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         setHasOptionsMenu(true);
 
@@ -89,7 +90,7 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new SwipeToDeleteCallback(this));
         itemTouchHelper.attachToRecyclerView(recyclerView);
 
-        homeViewModel.getAllDays().observe(this, new Observer<List<Day>>() {
+        homeViewModel.getAllDays().observe(getViewLifecycleOwner(), new Observer<List<Day>>() {
             @Override
             public void onChanged(List<Day> days) {
                 mAdapter.setDays(new ArrayList(days));
@@ -107,7 +108,7 @@ public class HomeFragment extends Fragment implements OnChartValueSelectedListen
             }
         });
 
-        homeViewModel.getProgress().observe(this, new Observer<List<Progress>>() {
+        homeViewModel.getProgress().observe(getViewLifecycleOwner(), new Observer<List<Progress>>() {
             @Override
             public void onChanged(List<Progress> progresses) {
                 if (!progresses.isEmpty()) {
